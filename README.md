@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+# Yarn
+Bem semelhante ao NPM porém com funcionalidades extras
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Start new React Aplication
+```sh
+  # create new project
+  yarn create react-app myapp --template=typescript
+```
 
-## Available Scripts
+## Add a new package
+```sh
+  # Add a new package
+  yarn add <package name>
+```
+<br>
 
-In the project directory, you can run:
+# TypeScript
 
-### `yarn start`
+## Typescript is essential for keeping code clean
+```ts
+  interface ProductProps = {
+    id: int;
+    name: string;
+    price: float;
+    avaiable: true | none;
+  }
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  export function RowProduct(props: ProductProps){
+    return (
+      <tr>
+        <td>{props.id}</td>
+        <td>{props.name}</td>
+        <td>{props.price}</td>
+        <td>{props.avaiable}</td>
+      </tr>
+    );
+  }
+```
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# CSS
+## Creating pure CSS variables
+```css
+:root {
+  --variable-color: #ffffff;
+}
 
-### `yarn test`
+body {
+  background: var(--variable-color);
+}
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Using 'rem' for more acessibility
 
-### `yarn build`
+```css
+@media(max-width: 1080px){
+  html{
+    font-size: 93.75%;
+  }
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+@media(max-width: 720px){
+  html{
+    font-size: 87.5%;
+  }
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Usefull Aplications
 
-### `yarn eject`
+## Diagrams
+> whimsical.com
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Prototype
+> figma.com
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Productivity
+> www.notion.so
