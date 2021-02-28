@@ -1,80 +1,34 @@
-# Yarn
-Bem semelhante ao NPM porém com funcionalidades extras
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Start new React Aplication
-```sh
-  # create new project
-  yarn create react-app myapp --template=typescript
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-## Add a new package
-```sh
-  # Add a new package
-  yarn add <package name>
-```
-<br>
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-# TypeScript
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Typescript is essential for keeping code clean
-```ts
-  interface ProductProps = {
-    id: int;
-    name: string;
-    price: float;
-    avaiable: true | none;
-  }
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-  export function RowProduct(props: ProductProps){
-    return (
-      <tr>
-        <td>{props.id}</td>
-        <td>{props.name}</td>
-        <td>{props.price}</td>
-        <td>{props.avaiable}</td>
-      </tr>
-    );
-  }
-```
-<br>
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-# CSS
-## Creating pure CSS variables
-```css
-:root {
-  --variable-color: #ffffff;
-}
+## Learn More
 
-body {
-  background: var(--variable-color);
-}
-```
+To learn more about Next.js, take a look at the following resources:
 
-## Using 'rem' for more acessibility
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```css
-@media(max-width: 1080px){
-  html{
-    font-size: 93.75%;
-  }
-}
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-@media(max-width: 720px){
-  html{
-    font-size: 87.5%;
-  }
-}
+## Deploy on Vercel
 
-```
-<br>
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-# Usefull Aplications
-
-## Diagrams
-> whimsical.com
-
-## Prototype
-> figma.com
-
-## Productivity
-> www.notion.so
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
