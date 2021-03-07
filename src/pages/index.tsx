@@ -33,7 +33,7 @@ export default function Home(props: HomeProps) {
     >
       <div className={styles.container}>
         <Head>
-          <title> Start | Move.it </title>
+          <title> Pomodoro | VBianchi </title>
         </Head>
         <ExperienceBar />
         <CountdownProvider>
@@ -56,12 +56,15 @@ export default function Home(props: HomeProps) {
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   
   const {level, currentExperience, challengesCompleted} = ctx.req.cookies;
+  let hasLevel = level !== null ? level : 0;
+  let hasCurrentExperience = currentExperience !== null ? currentExperience : 0;
+  let hasChalengesCompleted = challengesCompleted !== null ? challengesCompleted : 0;
 
   return {
     props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted),
+      level: Number(hasLevel),
+      currentExperience: Number(hasCurrentExperience),
+      challengesCompleted: Number(hasChalengesCompleted),
     }
   }
 }

@@ -12,7 +12,7 @@ export function Profile() {
       <img src="https://github.com/vitorbianchi.png" alt="Vitor Bianchi" />
       
       <div>
-        <strong>Vitor Bianchi</strong>
+        <strong><a href="https://github.com/vitorbianchi" >Vitor Bianchi</a></strong>
         <p>
           <img src="icons/level.svg" alt="Level" />
           Level {level}</p>

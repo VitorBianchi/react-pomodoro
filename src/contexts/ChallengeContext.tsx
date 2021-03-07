@@ -37,8 +37,8 @@ export function ChallengesProvider({ children, ...rest}: ChallengesProviderProps
 
   // States
   const [level, setLevel] = useState(rest.level ?? 1);
-  const [currentExperience, setCurrentExperience] = useState(rest.currentExperience > 0 ? rest.currentExperience : 0);
-  const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0);
+  const [currentExperience, setCurrentExperience] = useState(rest.currentExperience !== null ? rest.currentExperience : 0);
+  const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted !== null ? rest.challengesCompleted : 0);
   const [activeChallenge, setActiveChallenge] = useState(null);
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
   const experienceToNextLevel = Math.pow((level + 1)* 5, 2);
@@ -103,18 +103,20 @@ export function ChallengesProvider({ children, ...rest}: ChallengesProviderProps
 
   return (
     <ChallengesContext.Provider 
-      value={{ 
-        level,
-        currentExperience,
-        challengesCompleted,
-        experienceToNextLevel,
-        activeChallenge,
-        levelUp,
-        startNewChallenge,
-        resetChallenge,
-        completeChallenge,
-        closeLevelUpModal
-      }}
+      value={
+        { 
+          level,
+          currentExperience,
+          challengesCompleted,
+          experienceToNextLevel,
+          activeChallenge,
+          levelUp,
+          startNewChallenge,
+          resetChallenge,
+          completeChallenge,
+          closeLevelUpModal
+        }
+      }
     >
       { isLevelUpModalOpen && <LevelUpModal/> }
       { children }
